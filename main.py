@@ -14,3 +14,9 @@ def cargar_excel():
             mostrar_datos(df)
         except Exception as e:
             messagebox.showerror("Error", f"No se pudo leer el archivo: {str(e)}")
+
+# Función para mostrar los datos del archivo Excel en el Treeview
+def mostrar_datos(df):
+    # Limpiar el Treeview antes de insertar nuevos datos
+    for i in tree.get_children():
+        tree.delete(i)
