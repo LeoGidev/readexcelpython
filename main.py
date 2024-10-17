@@ -40,4 +40,5 @@ style = ttk.Style()
 style.theme_use("clam")
 style.configure("Treeview.Heading", font=("Helvetica", 10, "bold"), background="#26a69a", foreground="white")
 style.configure("Treeview", font=("Helvetica", 10), rowheight=25, fieldbackground="white", background="#ffffff", foreground="#000000")
+style.map("Treeview", background=[("selected", "#81c784")])
 
