@@ -1,7 +1,7 @@
 # readexcelpython
 # Excel Reader with Tkinter GUI
 
-![Example Screenshot](example.png)
+![Example Screenshot](example.PNG)
 
 ## 📋 Description
 
