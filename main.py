@@ -35,4 +35,6 @@ root = tk.Tk()
 root.title("Lector de Excel")
 root.geometry("800x400")
 root.configure(bg="#e0f7fa")
+# Estilos personalizados
+style = ttk.Style()
 
