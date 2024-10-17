@@ -26,3 +26,8 @@ def mostrar_datos(df):
     for col in df.columns:
         tree.heading(col, text=col)
         tree.column(col, anchor="center", width=100)
+     # Insertar filas en el Treeview
+    for index, row in df.iterrows():
+        tree.insert("", "end", values=list(row))
+
+
