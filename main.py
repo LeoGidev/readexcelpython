@@ -52,4 +52,8 @@ tree_frame.pack(fill="both", expand=True, padx=10, pady=10)
 
 tree = ttk.Treeview(tree_frame)
 tree.pack(fill="both", expand=True, side="left")
+# Barra de desplazamiento para el Treeview
+scrollbar = ttk.Scrollbar(tree_frame, orient="vertical", command=tree.yview)
+tree.configure(yscrollcommand=scrollbar.set)
+scrollbar.pack(side="right", fill="y")
 
