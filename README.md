@@ -1,7 +1,7 @@
 # readexcelpython
 # Excel Reader with Tkinter GUI
 
-![Example Screenshot](example.PNG)
+
 
 ## 📋 Description
 
@@ -40,7 +40,9 @@ Copiar código
 python excel_reader.py
 Click the Cargar Excel button, select an Excel file from your system, and the content will be displayed in a table within the window.
 
+```
 📸 Screenshot
+![Example Screenshot](example.PNG)
 
 
 This is a screenshot of the application after loading an Excel file:
