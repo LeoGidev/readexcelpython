@@ -42,6 +42,10 @@ style.configure("Treeview.Heading", font=("Helvetica", 10, "bold"), background="
 style.configure("Treeview", font=("Helvetica", 10), rowheight=25, fieldbackground="white", background="#ffffff", foreground="#000000")
 style.map("Treeview", background=[("selected", "#81c784")])
 
+# Crear botón para cargar archivo Excel
+btn_cargar = tk.Button(root, text="Cargar Excel", command=cargar_excel, font=("Helvetica", 12, "bold"), bg="#26a69a", fg="white", padx=10, pady=5)
+btn_cargar.pack(pady=20)
+
 # Crear Treeview para mostrar los datos del archivo Excel
 tree_frame = tk.Frame(root)
 tree_frame.pack(fill="both", expand=True, padx=10, pady=10)
