@@ -30,13 +30,13 @@ Running the Application
 Clone the repository:
 
 bash
-Copiar código
+
 git clone https://github.com/LeoGidev/readexcelpython
 cd excel-reader-tkinter
 Run the Python script:
 
 bash
-Copiar código
+
 python excel_reader.py
 Click the Cargar Excel button, select an Excel file from your system, and the content will be displayed in a table within the window.
 
@@ -45,21 +45,21 @@ Click the Cargar Excel button, select an Excel file from your system, and the co
 ![Example Screenshot](example.PNG)
 
 
-This is a screenshot of the application after loading an Excel file:
+## This is a screenshot of the application after loading an Excel file:
 
 
 
-📁 File Structure
+## 📁 File Structure
 bash
 Copiar código
 .
 ├── excel_reader.py        # Main Python script for the app
 ├── example.png            # Screenshot of the app
 ├── README.md              # This README file
-└── requirements.txt       # Optional: requirements file for dependencies
-💡 Customization
+
+## 💡 Customization
 You can easily change the style or functionality by modifying the ttk.Style settings in the script, or adding new features such as filtering or editing the Excel data.
 
-🧑‍💻 Contributing
+## 🧑‍💻 Contributing
 Feel free to fork this repository, open issues, or submit pull requests. All kinds of improvements are welcome!
 
