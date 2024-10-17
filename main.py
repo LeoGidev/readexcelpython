@@ -23,3 +23,6 @@ def mostrar_datos(df):
      # Insertar los encabezados
     tree["columns"] = list(df.columns)
     tree["show"] = "headings"
+    for col in df.columns:
+        tree.heading(col, text=col)
+        tree.column(col, anchor="center", width=100)
