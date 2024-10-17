@@ -30,4 +30,9 @@ def mostrar_datos(df):
     for index, row in df.iterrows():
         tree.insert("", "end", values=list(row))
 
+# Configurar la ventana principal de Tkinter
+root = tk.Tk()
+root.title("Lector de Excel")
+root.geometry("800x400")
+root.configure(bg="#e0f7fa")
 
