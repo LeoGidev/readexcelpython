@@ -50,16 +50,15 @@ Click the Cargar Excel button, select an Excel file from your system, and the co
 
 
 ## 📁 File Structure
-bash
-Copiar código
-.
-├── excel_reader.py        # Main Python script for the app
-├── example.png            # Screenshot of the app
-├── README.md              # This README file
+
+
+- ├── excel_reader.py        # Main Python script for the app
+- ├── example.png            # Screenshot of the app
+- ├── README.md              # This README file
 
 ## 💡 Customization
-You can easily change the style or functionality by modifying the ttk.Style settings in the script, or adding new features such as filtering or editing the Excel data.
+- You can easily change the style or functionality by modifying the ttk.Style settings in the script, or adding new features such as filtering or editing the Excel data.
 
 ## 🧑‍💻 Contributing
-Feel free to fork this repository, open issues, or submit pull requests. All kinds of improvements are welcome!
+- Feel free to fork this repository, open issues, or submit pull requests. All kinds of improvements are welcome!
 
