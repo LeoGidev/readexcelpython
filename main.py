@@ -4,10 +4,11 @@ from tkinter import filedialog, ttk, messagebox
 
 # Función para leer el archivo Excel
 def cargar_excel():
-     archivo_path = filedialog.askopenfilename(
+    archivo_path = filedialog.askopenfilename(
         filetypes=[("Archivo Excel", "*.xlsx *.xls")]
     )
-     if archivo_path:
+    
+    if archivo_path:
         try:
             # Cargar datos del archivo Excel
             df = pd.read_excel(archivo_path)
@@ -20,13 +21,16 @@ def mostrar_datos(df):
     # Limpiar el Treeview antes de insertar nuevos datos
     for i in tree.get_children():
         tree.delete(i)
-     # Insertar los encabezados
+
+    # Insertar los encabezados
     tree["columns"] = list(df.columns)
     tree["show"] = "headings"
+
     for col in df.columns:
         tree.heading(col, text=col)
         tree.column(col, anchor="center", width=100)
-     # Insertar filas en el Treeview
+
+    # Insertar filas en el Treeview
     for index, row in df.iterrows():
         tree.insert("", "end", values=list(row))
 
@@ -35,6 +39,7 @@ root = tk.Tk()
 root.title("Lector de Excel")
 root.geometry("800x400")
 root.configure(bg="#e0f7fa")
+
 # Estilos personalizados
 style = ttk.Style()
 style.theme_use("clam")
@@ -52,8 +57,11 @@ tree_frame.pack(fill="both", expand=True, padx=10, pady=10)
 
 tree = ttk.Treeview(tree_frame)
 tree.pack(fill="both", expand=True, side="left")
+
 # Barra de desplazamiento para el Treeview
 scrollbar = ttk.Scrollbar(tree_frame, orient="vertical", command=tree.yview)
 tree.configure(yscrollcommand=scrollbar.set)
 scrollbar.pack(side="right", fill="y")
 
+# Iniciar la aplicación
+root.mainloop()
