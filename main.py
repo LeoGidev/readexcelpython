@@ -50,3 +50,6 @@ btn_cargar.pack(pady=20)
 tree_frame = tk.Frame(root)
 tree_frame.pack(fill="both", expand=True, padx=10, pady=10)
 
+tree = ttk.Treeview(tree_frame)
+tree.pack(fill="both", expand=True, side="left")
+
