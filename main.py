@@ -20,3 +20,6 @@ def mostrar_datos(df):
     # Limpiar el Treeview antes de insertar nuevos datos
     for i in tree.get_children():
         tree.delete(i)
+     # Insertar los encabezados
+    tree["columns"] = list(df.columns)
+    tree["show"] = "headings"
