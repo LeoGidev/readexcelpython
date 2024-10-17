@@ -37,4 +37,6 @@ root.geometry("800x400")
 root.configure(bg="#e0f7fa")
 # Estilos personalizados
 style = ttk.Style()
+style.configure("Treeview.Heading", font=("Helvetica", 10, "bold"), background="#26a69a", foreground="white")
+style.configure("Treeview", font=("Helvetica", 10), rowheight=25, fieldbackground="white", background="#ffffff", foreground="#000000")
 
