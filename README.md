@@ -52,7 +52,7 @@ Click the Cargar Excel button, select an Excel file from your system, and the co
 ## 📁 File Structure
 
 
-- ├── excel_reader.py        # Main Python script for the app
+- ├── main.py        # Main Python script for the app
 - ├── example.png            # Screenshot of the app
 - ├── README.md              # This README file
 
