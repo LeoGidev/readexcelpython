@@ -100,6 +100,12 @@ scrollbar.pack(side="right", fill="y")
 # Frame para las entradas de edición
 edit_frame = tk.Frame(root, bg="#e0f7fa")
 edit_frame.pack(pady=10)
+# Crear campos de entrada dinámicos según las columnas del Excel
+entries = []
+for i in range(5):  # Esto es un ejemplo para crear 5 campos de entrada (puedes ajustar según tus datos)
+    entry = tk.Entry(edit_frame, width=15, font=("Helvetica", 10))
+    entry.grid(row=0, column=i, padx=5)
+    entries.append(entry)
 # Botones para actualizar y guardar
 btn_actualizar = tk.Button(root, text="Actualizar Fila", command=actualizar_fila, font=("Helvetica", 12, "bold"), bg="#26a69a", fg="white", padx=10, pady=5)
 btn_actualizar.pack(pady=5)
