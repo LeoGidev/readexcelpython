@@ -100,7 +100,12 @@ scrollbar.pack(side="right", fill="y")
 # Frame para las entradas de edición
 edit_frame = tk.Frame(root, bg="#e0f7fa")
 edit_frame.pack(pady=10)
+# Botones para actualizar y guardar
+btn_actualizar = tk.Button(root, text="Actualizar Fila", command=actualizar_fila, font=("Helvetica", 12, "bold"), bg="#26a69a", fg="white", padx=10, pady=5)
+btn_actualizar.pack(pady=5)
 
+btn_guardar = tk.Button(root, text="Guardar Excel", command=guardar_excel, font=("Helvetica", 12, "bold"), bg="#26a69a", fg="white", padx=10, pady=5)
+btn_guardar.pack(pady=5)
 # Asignar el evento de selección de fila
 tree.bind("<ButtonRelease-1>", seleccionar_fila)
 
