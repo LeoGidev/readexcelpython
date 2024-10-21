@@ -49,6 +49,8 @@ def actualizar_fila():
     selected_item = tree.selection()[0]
     # Obtener los nuevos valores de los campos de entrada
     nuevos_valores = [entry.get() for entry in entries]
+    # Actualizar la fila seleccionada en el Treeview
+    tree.item(selected_item, values=nuevos_valores)
 
 
 # Configurar la ventana principal de Tkinter
