@@ -101,6 +101,8 @@ scrollbar.pack(side="right", fill="y")
 edit_frame = tk.Frame(root, bg="#e0f7fa")
 edit_frame.pack(pady=10)
 
+# Asignar el evento de selección de fila
+tree.bind("<ButtonRelease-1>", seleccionar_fila)
 
 # Iniciar la aplicación
 root.mainloop()
