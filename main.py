@@ -57,6 +57,9 @@ def actualizar_fila():
 # Función para guardar el DataFrame modificado en un archivo Excel
 def guardar_excel():
     global df
+    if df is not None:
+        archivo_guardado = filedialog.asksaveasfilename(defaultextension=".xlsx", filetypes=[("Archivo Excel", "*.xlsx")])
+        if archivo_guardado:
 
 
 
