@@ -35,6 +35,8 @@ def mostrar_datos(df):
         tree.insert("", "end", values=list(row))
 # Función para seleccionar una fila y habilitar la edición
 def seleccionar_fila(event):
+    item = tree.selection()[0]
+
 
 # Configurar la ventana principal de Tkinter
 root = tk.Tk()
