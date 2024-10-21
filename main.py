@@ -33,6 +33,8 @@ def mostrar_datos(df):
     # Insertar filas en el Treeview
     for index, row in df.iterrows():
         tree.insert("", "end", values=list(row))
+# Función para seleccionar una fila y habilitar la edición
+def seleccionar_fila(event):
 
 # Configurar la ventana principal de Tkinter
 root = tk.Tk()
