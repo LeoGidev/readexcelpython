@@ -64,6 +64,7 @@ def guardar_excel():
                 df.to_excel(archivo_guardado, index=False)
                 messagebox.showinfo("Guardar", f"Archivo guardado correctamente en {archivo_guardado}")
             except Exception as e:
+                messagebox.showerror("Error", f"No se pudo guardar el archivo: {str(e)}")
 
 
 
