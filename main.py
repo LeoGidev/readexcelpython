@@ -63,6 +63,7 @@ def guardar_excel():
             try:
                 df.to_excel(archivo_guardado, index=False)
                 messagebox.showinfo("Guardar", f"Archivo guardado correctamente en {archivo_guardado}")
+            except Exception as e:
 
 
 
