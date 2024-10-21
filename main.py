@@ -36,6 +36,10 @@ def mostrar_datos(df):
 # Función para seleccionar una fila y habilitar la edición
 def seleccionar_fila(event):
     item = tree.selection()[0]
+    valores = tree.item(item, "values")
+
+    # Limpiar las entradas antes de cargar la nueva fila seleccionada
+    for entry in entries:
 
 
 # Configurar la ventana principal de Tkinter
