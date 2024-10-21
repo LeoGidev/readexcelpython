@@ -61,6 +61,7 @@ def guardar_excel():
         archivo_guardado = filedialog.asksaveasfilename(defaultextension=".xlsx", filetypes=[("Archivo Excel", "*.xlsx")])
         if archivo_guardado:
             try:
+                df.to_excel(archivo_guardado, index=False)
 
 
 
