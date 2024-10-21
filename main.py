@@ -40,6 +40,7 @@ def seleccionar_fila(event):
 
     # Limpiar las entradas antes de cargar la nueva fila seleccionada
     for entry in entries:
+        entry.delete(0, tk.END)
 
 
 # Configurar la ventana principal de Tkinter
