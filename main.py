@@ -44,6 +44,11 @@ def seleccionar_fila(event):
         # Insertar los valores en los campos de edición
     for i, value in enumerate(valores):
         entries[i].insert(0, value)
+# Función para actualizar los datos en el Treeview
+def actualizar_fila():
+    selected_item = tree.selection()[0]
+    # Obtener los nuevos valores de los campos de entrada
+    nuevos_valores = [entry.get() for entry in entries]
 
 
 # Configurar la ventana principal de Tkinter
