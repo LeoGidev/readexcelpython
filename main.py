@@ -54,6 +54,8 @@ def actualizar_fila():
     # Actualizar el DataFrame
     index = int(tree.index(selected_item))
     df.iloc[index] = nuevos_valores
+# Función para guardar el DataFrame modificado en un archivo Excel
+def guardar_excel():
 
 
 # Configurar la ventana principal de Tkinter
