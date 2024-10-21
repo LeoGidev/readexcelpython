@@ -97,5 +97,10 @@ scrollbar = ttk.Scrollbar(tree_frame, orient="vertical", command=tree.yview)
 tree.configure(yscrollcommand=scrollbar.set)
 scrollbar.pack(side="right", fill="y")
 
+# Frame para las entradas de edición
+edit_frame = tk.Frame(root, bg="#e0f7fa")
+edit_frame.pack(pady=10)
+
+
 # Iniciar la aplicación
 root.mainloop()
