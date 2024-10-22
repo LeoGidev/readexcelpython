@@ -96,6 +96,7 @@ def crear_campos_entrada(df):
 # Función para actualizar el contador de filas y columnas
 def actualizar_contador(df):
     num_filas = len(df)
+    num_columnas = len(df.columns)
 
 
 # Configurar la ventana principal de Tkinter
