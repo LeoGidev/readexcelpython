@@ -19,6 +19,7 @@ def cargar_excel():
             df = pd.read_excel(archivo_path)
             mostrar_datos(df)
             crear_campos_entrada(df)  # Crear campos de entrada después de cargar el archivo Excel
+            actualizar_contador(df)  # Actualizar el contador de filas y columnas
         except Exception as e:
             messagebox.showerror("Error", f"No se pudo leer el archivo: {str(e)}")
 
@@ -92,6 +93,9 @@ def crear_campos_entrada(df):
         entrada = tk.Entry(entrada_frame, font=("Helvetica", 10))
         entrada.pack(side="left", padx=5)
         entradas.append(entrada)
+# Función para actualizar el contador de filas y columnas
+def actualizar_contador(df):
+
 
 # Configurar la ventana principal de Tkinter
 root = tk.Tk()
@@ -137,7 +141,10 @@ btn_actualizar.pack(pady=10)
 btn_guardar = tk.Button(root, text="Guardar Cambios", command=guardar_excel, font=("Helvetica", 12, "bold"), bg="#26a69a", fg="white", padx=10, pady=5)
 btn_guardar.pack(pady=10)
 
+
+
 # Iniciar la aplicación
 root.mainloop()
+
 
 
