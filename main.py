@@ -146,7 +146,7 @@ btn_guardar.pack(pady=10)
 
 # Etiqueta para mostrar el contador de filas y columnas
 contador_label = tk.Label(root, text="Filas: 0, Columnas: 0", font=("Helvetica", 12), bg="#e0f7fa")
-
+contador_label.pack(pady=10)
 
 # Iniciar la aplicación
 root.mainloop()
