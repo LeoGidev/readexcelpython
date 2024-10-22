@@ -49,6 +49,7 @@ def actualizar_fila():
         nuevos_valores = [entrada.get() for entrada in entradas]
         if len(nuevos_valores) == len(df.columns):  # Verifica que coincida el número de columnas
             df.iloc[index] = nuevos_valores
+            mostrar_datos(df)  # Refresca los datos en el Treeview
 
 
 # Función para actualizar los datos en el Treeview
