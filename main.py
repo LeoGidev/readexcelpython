@@ -51,6 +51,8 @@ def actualizar_fila():
             df.iloc[index] = nuevos_valores
             mostrar_datos(df)  # Refresca los datos en el Treeview
             else:
+                messagebox.showerror("Error", "El número de columnas no coincide con el número de valores.")
+
 
 
 # Función para actualizar los datos en el Treeview
