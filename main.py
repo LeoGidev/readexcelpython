@@ -50,6 +50,7 @@ def actualizar_fila():
         if len(nuevos_valores) == len(df.columns):  # Verifica que coincida el número de columnas
             df.iloc[index] = nuevos_valores
             mostrar_datos(df)  # Refresca los datos en el Treeview
+            else:
 
 
 # Función para actualizar los datos en el Treeview
