@@ -17,6 +17,7 @@ def cargar_excel():
     if archivo_path:
         try:
             df = pd.read_excel(archivo_path)
+            agregar_numeracion(df)  # Agregar numeración a las filas
             mostrar_datos(df)
             crear_campos_entrada(df)  # Crear campos de entrada después de cargar el archivo Excel
             actualizar_contador(df)  # Actualizar el contador de filas y columnas
@@ -93,12 +94,16 @@ def crear_campos_entrada(df):
         entrada = tk.Entry(entrada_frame, font=("Helvetica", 10))
         entrada.pack(side="left", padx=5)
         entradas.append(entrada)
+
 # Función para actualizar el contador de filas y columnas
 def actualizar_contador(df):
     num_filas = len(df)
     num_columnas = len(df.columns)
     contador_label.config(text=f"Filas: {num_filas}, Columnas: {num_columnas}")
 
+# Función para agregar una columna de numeración automática
+def agregar_numeracion(df):
+    df['Numeración'] = range(1, len(df) + 1)
 
 # Configurar la ventana principal de Tkinter
 root = tk.Tk()
