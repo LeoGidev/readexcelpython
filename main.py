@@ -45,6 +45,10 @@ def actualizar_fila():
     selected_item = tree.selection()
     if selected_item:
         index = tree.index(selected_item[0])
+        # Obtener los valores nuevos desde los campos de entrada
+        nuevos_valores = [entrada.get() for entrada in entradas]
+        if len(nuevos_valores) == len(df.columns):  # Verifica que coincida el número de columnas
+
 
 # Función para actualizar los datos en el Treeview
 def actualizar_fila():
