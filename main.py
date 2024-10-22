@@ -97,6 +97,7 @@ def crear_campos_entrada(df):
 def actualizar_contador(df):
     num_filas = len(df)
     num_columnas = len(df.columns)
+    contador_label.config(text=f"Filas: {num_filas}, Columnas: {num_columnas}")
 
 
 # Configurar la ventana principal de Tkinter
