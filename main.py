@@ -4,10 +4,12 @@ from tkinter import filedialog, ttk, messagebox
 
 # Variables globales
 df = None
+archivo_path = None  # Guardar la ruta del archivo cargado
+entradas = []
 
 # Función para leer el archivo Excel
 def cargar_excel():
-    global df
+    global df, archivo_path
     archivo_path = filedialog.askopenfilename(
         filetypes=[("Archivo Excel", "*.xlsx *.xls")]
     )
@@ -16,8 +18,21 @@ def cargar_excel():
         try:
             df = pd.read_excel(archivo_path)
             mostrar_datos(df)
+            crear_campos_entrada(df)  # Crear campos de entrada después de cargar el archivo Excel
         except Exception as e:
             messagebox.showerror("Error", f"No se pudo leer el archivo: {str(e)}")
+
+# Función para guardar el DataFrame actualizado en el archivo Excel
+def guardar_excel():
+    global df, archivo_path
+    if df is not None and archivo_path is not None:
+        try:
+            df.to_excel(archivo_path, index=False)  # Guarda los cambios en el archivo original
+            messagebox.showinfo("Éxito", "El archivo se ha guardado correctamente.")
+        except Exception as e:
+            messagebox.showerror("Error", f"No se pudo guardar el archivo: {str(e)}")
+    else:
+        messagebox.showerror("Error", "No hay datos cargados para guardar.")
 
 # Función para mostrar los datos del archivo Excel en el Treeview
 def mostrar_datos(df):
@@ -65,6 +80,19 @@ def actualizar_fila():
         else:
             messagebox.showerror("Error", "El número de columnas no coincide con el número de valores.")
 
+# Función para crear los campos de entrada dinámicamente según las columnas del Excel
+def crear_campos_entrada(df):
+    global entradas
+    # Limpiar el frame de entrada si ya hay entradas creadas
+    for widget in entrada_frame.winfo_children():
+        widget.destroy()
+
+    entradas = []
+    for col in df.columns:
+        entrada = tk.Entry(entrada_frame, font=("Helvetica", 10))
+        entrada.pack(side="left", padx=5)
+        entradas.append(entrada)
+
 # Configurar la ventana principal de Tkinter
 root = tk.Tk()
 root.title("Lector de Excel")
@@ -97,20 +125,19 @@ scrollbar.pack(side="right", fill="y")
 # Vincular la selección del Treeview con la función de selección de fila
 tree.bind("<<TreeviewSelect>>", seleccionar_fila)
 
-# Crear campos de entrada para editar datos
+# Crear frame para los campos de entrada
 entrada_frame = tk.Frame(root)
 entrada_frame.pack(fill="x", padx=10, pady=10)
 
-entradas = []
-for col in df.columns:
-    entrada = tk.Entry(entrada_frame, font=("Helvetica", 10))
-    entrada.pack(side="left", padx=5)
-    entradas.append(entrada)
-
 # Botón para actualizar la fila seleccionada
 btn_actualizar = tk.Button(root, text="Actualizar Fila", command=actualizar_fila, font=("Helvetica", 12, "bold"), bg="#26a69a", fg="white", padx=10, pady=5)
-btn_actualizar.pack(pady=20)
+btn_actualizar.pack(pady=10)
+
+# Botón para guardar los cambios
+btn_guardar = tk.Button(root, text="Guardar Cambios", command=guardar_excel, font=("Helvetica", 12, "bold"), bg="#26a69a", fg="white", padx=10, pady=5)
+btn_guardar.pack(pady=10)
 
 # Iniciar la aplicación
 root.mainloop()
+
 
