@@ -144,6 +144,8 @@ btn_actualizar.pack(pady=10)
 btn_guardar = tk.Button(root, text="Guardar Cambios", command=guardar_excel, font=("Helvetica", 12, "bold"), bg="#26a69a", fg="white", padx=10, pady=5)
 btn_guardar.pack(pady=10)
 
+# Etiqueta para mostrar el contador de filas y columnas
+contador_label = tk.Label(root, text="Filas: 0, Columnas: 0", font=("Helvetica", 12), bg="#e0f7fa")
 
 
 # Iniciar la aplicación
