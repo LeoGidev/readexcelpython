@@ -39,18 +39,7 @@ def mostrar_datos(df):
     for index, row in df.iterrows():
         tree.insert("", "end", values=list(row))
 
-# Función para seleccionar una fila y habilitar la edición
-def seleccionar_fila(event):
-    item = tree.selection()[0]
-    valores = tree.item(item, "values")
 
-    # Limpiar las entradas antes de cargar la nueva fila seleccionada
-    for entry in entries:
-        entry.delete(0, tk.END)
-    
-    # Insertar los valores en los campos de edición
-    for i, value in enumerate(valores):
-        entries[i].insert(0, value)
 
 # Función para actualizar los datos en el Treeview
 def actualizar_fila():
