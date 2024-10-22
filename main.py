@@ -39,7 +39,9 @@ def mostrar_datos(df):
     for index, row in df.iterrows():
         tree.insert("", "end", values=list(row))
 
-
+# Función para actualizar una fila en el DataFrame y en el Treeview
+def actualizar_fila():
+    global df
 
 # Función para actualizar los datos en el Treeview
 def actualizar_fila():
