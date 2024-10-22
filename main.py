@@ -42,6 +42,9 @@ def mostrar_datos(df):
 # Función para actualizar una fila en el DataFrame y en el Treeview
 def actualizar_fila():
     global df
+    selected_item = tree.selection()
+    if selected_item:
+        index = tree.index(selected_item[0])
 
 # Función para actualizar los datos en el Treeview
 def actualizar_fila():
